@@ -7,7 +7,7 @@
 #= require angular-messages
 #= require angular-rails-templates
 #= require angular-ui-router
-#= require ngStorage
+#= require ngstorage
 
 #= require_tree ./templates
 
