@@ -42,4 +42,4 @@ Ensure that the Heroku app is configured to use the [Ruby-Bower buildpack](https
 
 After every green commit to `master`, [CircleCI](https://circleci.com/gh/SolarCS/storytellers/tree/master) will automatically deploy to Heroku and migrate the database.
 
-The production application lives at [http://cipher-storytellers.herokuapp.com](http://cipher-storytellers.herokuapp.com).
+The production application lives at [http://cipher-storyteller.herokuapp.com](http://cipher-storyteller.herokuapp.com).
