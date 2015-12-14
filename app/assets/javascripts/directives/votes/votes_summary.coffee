@@ -7,7 +7,7 @@ angular.module('storyteller').directive 'votesSummary', ($rootScope) ->
 
   link: (scope) ->
 
-    MAX_NUM_NAMES = 4
+    MAX_NUM_NAMES = 3
 
     mapNames = (votes) ->
       _.tap [], (names) ->
@@ -21,8 +21,10 @@ angular.module('storyteller').directive 'votesSummary', ($rootScope) ->
     summarize = (votes) ->
       names = if votes.length then mapNames(votes) else ['Nobody']
       if names.length > MAX_NUM_NAMES
-        theRest = "#{ names.length - MAX_NUM_NAMES } others"
-        names = _.take(names, MAX_NUM_NAMES).concat(theRest)
+        theRestCount = names.length - MAX_NUM_NAMES
+        theRestRendered =
+        theRest = "#{ theRestCount } other#{ if theRestCount > 1 then 's' else '' }"
+        names = _.take(names, MAX_NUM_NAMES).concat(theRestRendered)
       renderedNames = if names.length > 1
         [_.take(names, names.length - 1).join(', '), _.last(names) ].join(' and ')
       else _.first(names)
