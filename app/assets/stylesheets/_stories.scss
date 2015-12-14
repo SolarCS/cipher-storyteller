@@ -1,0 +1,85 @@
+.story-panel {
+  overflow: auto;
+  margin: 4px 0 $magic-line-height;
+}
+
+.add-story-link {
+  float: right;
+  font-size: .85rem;
+}
+
+.story {
+  border-bottom: 1px dotted rgba($jet-stream, .5);
+  display: table;
+  font-size: .75rem;
+  margin-bottom: $magic-line-height / 2;
+  padding-bottom: $magic-line-height / 2;
+  width: 100%;
+}
+
+.inner-story-wrapper {
+  display: table-row;
+}
+
+.story-left-section, .story-right-section {
+  display: table-cell;
+  vertical-align: middle;
+}
+.story-left-section {
+  width: 70%;
+}
+
+.story-right-section {
+  padding-left: 5%;
+  width: 30%;
+}
+
+.story-title {
+  display: inline-block;
+  font-weight: $medium-font-weight;
+  margin-right: 6px;
+}
+
+.story-type {
+  background: rgba($jet-stream, .6);
+  border-radius: 2px;
+  display: inline-block;
+  font-size: .65em;
+  line-height: 1em;
+  margin-right: 6px;
+  padding: .25em .5em .2em;
+  vertical-align: 1px;
+}
+
+.edit-story-link {
+  display: inline-block;
+  font-size: .85em;
+}
+
+.story-description {
+  line-height: 1.25em;
+}
+
+.story-created-at {
+  font-size: .65em;
+}
+
+.votes-primary-info {
+  .vote-button {
+    float: right;
+    margin-left: 12px;
+    margin-top: -4px;
+  }
+  .vote-count {
+    font-size: 2.5em;
+    font-weight: $medium-font-weight;
+    text-align: right;
+  }
+}
+
+.votes-summary {
+  font-size: .65em;
+  line-height: 1.25em;
+  margin-top: .5em;
+  text-align: right;
+}

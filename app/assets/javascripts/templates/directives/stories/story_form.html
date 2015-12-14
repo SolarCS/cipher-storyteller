@@ -1,0 +1,40 @@
+<form class="story-form" name="storyForm" ng-submit="submit()" novalidate>
+
+  <div class="field">
+    <label>Title:</label>
+    <input type="text" name="title" ng-model="story.title" required>
+    <div class="errors"
+      ng-if='submitAttempted'
+      ng-messages="storyForm.title.$error">
+      <div class="error" ng-message="required">Title is required.</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Description:</label>
+    <textarea name="description" ng-model="story.description" required></textarea>
+    <div class="errors"
+      ng-if='submitAttempted'
+      ng-messages="storyForm.description.$error">
+      <div class="error" ng-message="required">Description is required.</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Type:</label>
+    <select name="typeId" ng-model="story.typeId" ng-options="type.id as type.name for type in types" required></select>
+    <div class="errors"
+      ng-if='submitAttempted'
+      ng-messages="storyForm.typeId.$error">
+      <div class="error" ng-message="required">Type is required.</div>
+    </div>
+  </div>
+
+  <div class="action">
+    <input type="submit" value="{{ story.id ? 'Update' : 'Create' }} Story">
+    <button class="delete" ng-if="story.id" ng-click="delete()">Delete Story</button>
+  </div>
+
+  <div class="error server-error" ng-bind="serverError">
+
+</form>

@@ -1,0 +1,14 @@
+input, textarea {
+  background: transparent;
+  border: 1px solid $jet-stream;
+  box-sizing: border-box;
+  color: $default-color;
+  font-size: 1em;
+  padding: .15em .5em;
+  &:focus {
+    background: rgba(white, .05);
+    border-color: $twine;
+    box-shadow: none;
+    outline: none;
+  }
+}

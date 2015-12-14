@@ -1,0 +1,10 @@
+test:
+  pre:
+    - bower install
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - git push git@heroku.com:storyteller.git $CIRCLE_SHA1:refs/heads/master --force
+      - heroku run rake db:migrate --app storyteller

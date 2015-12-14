@@ -1,0 +1,19 @@
+{
+  "name": "storyteller",
+  "version": "0.1.0",
+  "authors": [
+    "Nick Cherry <ncherry@cipherhealth.com>"
+  ],
+  "dependencies": {
+    "angular": "1.4.8",
+    "angular-messages": "1.4.6",
+    "angular-ui-router": "0.2.15",
+    "bowser": "1.0.0",
+    "humps": "0.7.0",
+    "lodash": "3.10.1",
+    "ngstorage": "0.3.10"
+  },
+  "resolutions": {
+    "angular": "1.4.8"
+  }
+}

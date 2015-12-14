@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="storyteller"
+  scroll-on-state-change
+  ng-class="{ 'app-initialized': $root.appInitialized,
+              'android': $root.browser.android,
+              'chrome': $root.browser.chrome,
+              'firefox': $root.browser.firefox,
+              'ios': $root.browser.ios,
+              'mobile': $root.browser.mobile,
+              'safari': $root.browser.safari }">
+
+  <head>
+
+    <title>Storyteller</title>
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densityDpi=device-dpi, user-scalable=no" />
+
+    <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+
+    <base href="/" />
+
+    <%= stylesheet_link_tag 'application', media: 'all'%>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+
+  </head>
+  <body>
+    <%= yield %>
+    <script>window.railsEnv = "<%= Rails.env %>";</script>
+  </body>
+</html>

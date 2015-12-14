@@ -1,0 +1,36 @@
+form {
+
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 620px;
+  padding: 10px;
+  width: 100%;
+
+  &.narrow {
+    max-width: 500px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+  }
+
+  .field {
+    margin-bottom: $magic-line-height / 2;
+  }
+
+  .action {
+    margin-top: $magic-line-height;
+    text-align: center;
+    input, button, .button {
+      display: block;
+      margin: 0 auto $magic-line-height / 2;
+      width: 40%;
+    }
+  }
+
+  .server-error {
+    margin-top: $magic-line-height;
+    text-align: center;
+  }
+
+}

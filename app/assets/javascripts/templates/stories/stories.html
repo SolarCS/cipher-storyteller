@@ -1,0 +1,11 @@
+<div class="main-content">
+  <div class="story-panel">
+    <a class="add-story-link button" ui-sref="root.newStory">
+      Tell a New Story
+    </a>
+    <select ng-model="sortBy"
+      ng-options="option as option.name for option in sortOptions">
+    </select>
+  </div>
+  <stories stories="stories"></stories>
+</div>

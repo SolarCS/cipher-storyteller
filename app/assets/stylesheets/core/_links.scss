@@ -1,0 +1,32 @@
+a {
+
+  $link-color: $twine;
+
+  color: $link-color;
+  cursor: pointer;
+  line-height: 1em;
+  position: relative;
+  text-decoration: none;
+  &:link, &:visited, &:hover, &:active {
+    outline: none;
+  }
+  &:hover:after {
+    border-bottom: 1px solid;
+    bottom: 1px;
+    content: '';
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+  }
+  img {
+    border: none;
+    outline: none;
+  }
+}
+
+.no-underline {
+  &:hover:after {
+    content: none;
+  }
+}

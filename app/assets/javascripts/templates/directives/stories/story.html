@@ -1,0 +1,24 @@
+<div class="story">
+  <div class="inner-story-wrapper">
+    <div class="story-left-section">
+      <div class="story-primary-info">
+        <div class="story-title" ng-bind="story.title"></div>
+        <div class="story-type" ng-bind="story.type.name"></div>
+        <a class="edit-story-link"
+          ng-if="story.canEdit($root.currentUser)"
+          ui-sref="root.editStory({ id: story.id })">
+          Edit
+        </a>
+      </div>
+      <div class="story-description" ng-bind="story.description"></div>
+      <div class="story-created-at">Created {{ story.createdAt | date:'shortDate' }}</div>
+    </div>
+    <div class="story-right-section">
+      <div class="votes-primary-info">
+        <vote-button votable="story"></vote-button>
+        <div class="vote-count" ng-bind="story.votes.length"></div>
+      </div>
+      <votes-summary votable="story"></votes-summary>
+    </div>
+  </div>
+</div>

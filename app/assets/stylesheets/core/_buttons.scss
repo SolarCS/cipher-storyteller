@@ -1,0 +1,23 @@
+input[type=submit], button, .button {
+  background: rgba($jet-stream, .7);
+  border: 0;
+  box-shadow: 0 0 6px 0 rgba($twine, .7);
+  color: $prussian-blue;
+  cursor: pointer;
+  font-size: .9rem;
+  @extend .no-underline;
+  outline: none;
+  padding: .5em .5em;
+  &:hover, &:active, &:focus {
+    background: rgba($jet-stream, .8);
+    color: $prussian-blue;
+    outline: none;
+  }
+  &.delete {
+    background: rgba($amaranth, .7);
+    box-shadow: 0 0 6px 0 rgba($amaranth, .7);
+    &:hover {
+      background: rgba($amaranth, .8);
+    }
+  }
+}

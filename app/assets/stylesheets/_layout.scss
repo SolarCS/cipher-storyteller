@@ -1,0 +1,11 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#main-content-wrapper {
+  margin: ($magic-line-height / 2) $content-margin-horizontal-xs $magic-line-height;
+  @include respond-to(sm) {
+    margin: ($magic-line-height / 2) $content-margin-horizontal-sm $magic-line-height;
+  }
+}

@@ -1,0 +1,13 @@
+.vote-button {
+  background-image: image-url('upvote-empty.png');
+  background-size: 34px 32px;
+  cursor: pointer;
+  height: 32px;
+  width: 34px;
+  &:hover {
+    background-image: image-url('upvote-hover.png');
+  }
+  &.full {
+    background-image: image-url('upvote-full.png');
+  }
+}
